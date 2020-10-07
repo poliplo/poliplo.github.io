@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@import "variables.scss";
+
+@import "scaffolding.scss";
+
+/*blocks*/
+@import "blocks/visually-hidden.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/user-list.scss";
+@import "blocks/stats.scss";
+@import "blocks/advantages.scss";
+@import "blocks/slider.scss";
+@import "blocks/news.scss";
+@import "blocks/reviews.scss";
+
+@import "blocks/service-list.scss";
+
+
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/contacts.scss";
+@import "blocks/copyright.scss";
+
+@import "blocks/enrol.scss";
+@import "blocks/list.scss";
+@import "blocks/checkbox.scss";
+
+@import "blocks/page-main.scss";
+@import "blocks/gallery.scss";
+@import "blocks/price.scss";

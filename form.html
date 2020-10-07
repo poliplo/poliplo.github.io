@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Записаться на стрижку</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+  </head>
+  <body>
+
+    <header class="page-header page-header--inner">
+      <a class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+        </picture>
+      </a>
+      <nav class="main-nav main-nav--closed">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Наши работы</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Записаться</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Контакты</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__login" href="login.html">
+              <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg>
+              Войти
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+
+    <main class="page-main page-main--inner">
+        <h1 class="visually-hidden">Записаться на стрижку</h1>
+
+        <section class="enrol">
+          <div class="enrol__wrapper">
+            <h2 class="enrol__title  enrol__title--main">Запись на стрижку</h2>
+            <a href="index.html" class="enrol__back-btn button">
+              На главную
+            </a>
+
+            <form class="enrol__form" action="echo.htmlacademy.ru" method="get">
+
+                <fieldset class="enrol__container">
+                  <div class="enrol__user-info">
+                  <ul class="enrol__list list">
+                    <li class="list__item">
+                      <input type="text" class="list__input" id="surname" name="surname" placeholder="Фамилия">
+                    </li>
+                    <li class="list__item">
+                      <input type="text" class="list__input" id="name" name="name" placeholder="Имя">
+                    </li>
+                    <li class="list__item">
+                      <input type="text" class="list__input" id="patronym" name="patronym" placeholder="Отчество">
+                    </li>
+                    <li class="list__item">
+                      <input type="tel" class="list__input" id="phone" name="phone" placeholder="Контактный телефон">
+                    </li>
+                    <li class="list__item">
+                      <input type="email" class="list__input" id="email" name="email" placeholder="Контактный e-mail">
+                    </li>
+
+                    <li class="list__item">
+                      <textarea class="list__textarea" id="feedback" name="feedback" placeholder="Доп. информация для мастера"></textarea>
+                    </li>
+                  </ul>
+              </div>
+                </fieldset>
+
+                <fieldset class="enrol__container">
+                    <legend class="enrol__title enrol__title--section">Выберите модель бороды</legend>
+                    <ul class="enrol__list checkbox checkbox--radio">
+                      <li class="checkbox-radio__item checkbox-radio__item--1">
+                        <input type="radio" class="checkbox-radio__input visually-hidden" id="admiral" name="beard" checked>
+                        <label class="checkbox-radio__label" for="admiral">
+                          адмирал
+                        </label>
+                      </li>
+                      <li class="checkbox-radio__item checkbox-radio__item--2">
+                        <input type="radio" class="checkbox-radio__input visually-hidden" id="woodman" name="beard">
+                        <label class="checkbox-radio__label" for="woodman">
+                          лесоруб
+                        </label>
+                      </li>
+                      <li class="checkbox-radio__item checkbox-radio__item--3">
+                        <input type="radio" class="checkbox-radio__input visually-hidden" id="iceman" name="beard">
+                        <label class="checkbox-radio__label" for="iceman">
+                          полярник
+                        </label>
+                      </li>
+                      <li class="checkbox-radio__item checkbox-radio__item--4">
+                        <input type="radio" class="checkbox-radio__input visually-hidden" id="boyar" name="beard">
+                        <label class="checkbox-radio__label" for="boyar">
+                          боярин
+                        </label>
+                      </li>
+                      <li class="checkbox-radio__item checkbox-radio__item--5">
+                        <input type="radio" class="checkbox-radio__input visually-hidden" id="wiseman" name="beard">
+                        <label class="checkbox-radio__label" for="wiseman">
+                          мудрец
+                        </label>
+                      </li>
+                </fieldset>
+
+                <fieldset class="enrol__container">
+                  <legend class="enrol__title enrol__title--section">Дополнительные услуги:</legend>
+                  <ul class="enrol__list checkbox checkbox--list">
+                    <li class="checkbox__item">
+                      <input type="checkbox" class="checkbox__input visually-hidden" id="dye" name="dye" checked>
+                      <label class="checkbox__label" for="dye">
+                        Подкрасить бороду
+                      </label>
+                    </li>
+                    <li class="checkbox__item">
+                      <input type="checkbox" class="checkbox__input visually-hidden" id="curl" name="curl" checked>
+                      <label class="checkbox__label" for="curl">
+                        Накрутить усы
+                      </label>
+                    </li>
+                    <li class="checkbox__item">
+                      <input type="checkbox" class="checkbox__input visually-hidden" id="brush" name="brush">
+                      <label class="checkbox__label" for="brush">
+                        Причесать бороду
+                      </label>
+                    </li>
+                    <li class="checkbox__item">
+                      <input type="checkbox" class="checkbox__input visually-hidden" id="level" name="level">
+                      <label class="checkbox__label" for="level">
+                        Подровнять виски
+                      </label>
+                    </li>
+                    <li class="checkbox__item">
+                      <input type="checkbox" class="checkbox__input visually-hidden" id="grey" name="grey">
+                      <label class="checkbox__label" for="grey">
+                        Убрать седину
+                      </label>
+                    </li>
+                    <li class="checkbox__item">
+                      <input type="checkbox" class="checkbox__input visually-hidden" id="bald" name="bald">
+                      <label class="checkbox__label" for="bald">
+                        Отполировать лысину
+                      </label>
+                    </li>
+                </fieldset>
+
+                <button class="enrol__button button" type="submit">
+                  Отправить заявку
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__contacts contacts">
+          <b class="contacts__title">Барбершоп «Бородинский»</b>
+          <p class="contacts__text">
+            г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+            <a class="contacts__phone" href="tel:+78125556666">
+              +7 (812) 555-66-66
+            </a>
+          </p>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social-link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span>
+                B
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social-link--facebook" href="https://facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span>
+                f
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social-link--instagram" href="https://instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+                  <image id="Vector_Smart_Object_copy_11" data-name="Vector Smart Object copy 11" width="36" height="36" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABTElEQVRYhe2YgQ3CIBBFv8YBOoJOoiPoBmWDOoHdwG6gTqAb6AiO4AhsgMGcJuJRDqoNJn0JiTng+FDurnVkjCkB7JAHygoymYh5MM5AwxvZCZr0sMYNwMHTNweweLOY33O219TTanf14Q6FGASFyE5QH5laA7h6+qbUehUUxTcS440auB1H0zEtVkzCq7o47PLIGgBrT98WQOXYuLv0eaKMyJrZNUfRUhIKzxx3XFLpKBjbhXbsQ9OYaP4yMXInIYmkpGiTnhB3GcuW8SUjyJcckwRxL1g2kpaMfUl9Eh8fSBPjHsDGueD291GYGDX5+Jog61CRABdJdlaBqHwRE2UnchyLorkiYsPeHvtKuFtNY0WP6klKHrK7nVHZ4CLnSn2zmJN5klrtNdWyJnG+l+EVNsRffErbz9u6p/XnrmH4OyZEloJSysFvANQdA5TVd+dliIMAAAAASUVORK5CYII="/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+  </body>
+</html>

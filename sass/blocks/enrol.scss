@@ -1,0 +1,141 @@
+.enrol {
+  /*width: 320px;
+  margin: 0 auto;*/
+}
+
+.enrol__wrapper {
+  padding: 0 20px;
+}
+
+.enrol__container {
+  padding: 0;
+  border: none;
+}
+
+.enrol__title {
+  margin-top: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: normal;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  &--main {
+    padding-top: 34px;
+    padding-bottom: 27px;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+}
+
+.enrol__back-btn {
+  display: none;
+}
+
+.enrol__button {
+  margin-bottom: 72px;
+
+  background-color: $bg-lightbrown;
+  color: #ffffff;
+
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+
+  &:hover {
+    background-color: #6a4d38;
+  }
+
+  &:active {
+    background-color: lighten(#6a4d38, 3%);
+    color: rgba(#ffffff, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .enrol {
+    width: auto;
+  }
+
+  .enrol__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /*width: 640px;adaptive*/
+    box-sizing: border-box;
+    width: 84%;
+    max-width: 960px;
+
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .enrol__container {
+    border-top: 1px solid #e5ddd5;
+  }
+
+  .enrol__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .enrol__title {
+    font-size: 30px;
+    line-height: 30px;
+
+    &--main {
+      font-size: 40px;
+    }
+  }
+
+  .enrol__title--section {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .enrol__back-btn {
+    display: block;
+    width: auto;
+    min-width: 160px;
+
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  .enrol__user-contacts {
+    display: flex;
+  }
+
+  .enrol__button {
+    font-size: 24px;
+    line-height: 30px;
+
+    &:disabled {
+      background-color: #eaeaea;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .enrol__wrapper {
+    /*width: 960px;*/
+  }
+
+  .enrol__title--section {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .enrol__list {
+    justify-content: space-between;
+  }
+}

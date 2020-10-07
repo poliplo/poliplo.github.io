@@ -1,0 +1,135 @@
+.price {
+  /*width: 320px;
+  margin: 0 auto;adaptive*/
+  position: relative;
+
+  background-color: #353535;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -34px;
+    z-index: 10;
+    width: 100%;
+    height: 34px;
+    background-image: linear-gradient(to top right, transparent 50%, #353535 50%), linear-gradient(to top left, transparent 50%, #353535 50%);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: 50.1% 100%;
+  }
+}
+
+.price__wrapper {
+  padding: 30px 20px 50px;
+}
+
+.price__title {
+  margin-top: 0;
+  padding-top: 40px;
+
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price__column,
+.price__deal {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.price__list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price__number {
+  display: none;
+}
+
+.price__service,
+.price__option {
+  display: block;
+}
+
+.price__service {
+  font-weight: bold;
+}
+
+.price__option {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.price__value {
+  width: 27%;
+  vertical-align: top;
+  text-align: right;
+}
+
+.price__deal {
+  border: 1px solid #414141;
+  box-shadow: inset 0 0 0 1px rgba(#ffffff, 0.1);
+
+  & p {
+    position: relative;
+    margin-left: 100px;
+    margin-top: 23px;
+    margin-bottom: 42px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -80px;
+
+      width: 58px;
+      height: 57px;
+
+      background-image: url(../img/clock.png);
+    }
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .price {
+    width: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .price__wrapper {
+    box-sizing: border-box;
+
+    width: 84%;
+    max-width: 960px;
+    /*width: 640px;adaptive*/
+
+    margin: 0 auto;
+    padding: 30px 64px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__wrapper {
+    /*width: 960px;adaptive*/
+    padding-top: 15px;
+    padding-bottom: 80px;
+  }
+
+  .price__title {
+    padding-top: 65px;
+
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+  }
+}

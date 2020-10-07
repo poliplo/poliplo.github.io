@@ -1,0 +1,238 @@
+.gallery {
+  /*.width: 320px;
+  margin: 0 auto;adaptive*/
+  position: relative;
+
+  padding-bottom: 34px;
+
+  color: #000000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -34px;
+    z-index: 10;
+    width: 100%;
+    height: 34px;
+    background-image: linear-gradient(to top right, transparent 50%, #f8f5f2 50%), linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: 50.1% 100%;
+  }
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.gallery-item--work-of-month {
+  position: relative;
+
+  &::before {
+    content: "Работа месяца";
+    position: absolute;
+    top: 401px;
+    left: 20px;
+    width: 140px;
+    padding: 15px 11px 15px 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #826550;
+  }
+}
+
+.gallery-item__image-wrapper {
+  position: relative;
+  height: 176px;
+  margin: 0;
+  line-height: 0;
+  text-align: center;
+  background-color: #e6ded6;
+  overflow: hidden;
+}
+
+.gallery-item--work-of-month .gallery-item__image-wrapper {
+  height: 480px;
+}
+
+.gallery-item__image {
+  width: 270px;
+}
+
+.gallery-item__review {
+  padding: 19px 21px 0 21px;
+  border: 1px solid #e5ddd5;
+  border-top: none;
+}
+
+.gallery-item__title {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: bold;
+}
+
+.gallery-item__text {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery {
+    width: auto;
+    padding: 0 64px;
+    padding-bottom: 27px;
+  }
+
+  .gallery-item {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 41px;
+    padding: 0;
+  }
+
+  .gallery-item--work-of-month {
+    &::before {
+      top: 35px;
+      bottom: auto;
+      left: 0;
+    }
+  }
+
+  .gallery-item__image-wrapper,
+  .gallery-item--work-of-month .gallery-item__image-wrapper {
+    height: auto;
+  }
+
+  .gallery-item__image-wrapper {
+    position: relative;
+    width: 270px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: calc(100% - 1px);
+      height: calc(100% - 1px);
+      border: 1px solid #e5ddd5;
+      border-top: none;
+      border-right: none;
+    }
+  }
+
+  .gallery-item img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .gallery-item__review {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: calc(100% - 370px);
+    padding: 43px 50px 20px 50px;
+
+    border-top: 1px solid #e5ddd5;
+    border-left: none;
+  }
+
+  .gallery-item__title {
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 47px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .gallery::after {
+    display: none;
+  }
+
+  .gallery-item {
+    &:last-child {
+      margin-bottom: 41px;
+    }
+  }
+
+  .gallery-item:first-child .gallery-item__image-wrapper {
+    width: 480px;
+  }
+
+  .gallery-item:first-child .gallery-item__review {
+    width: 396px;
+    padding: 128px 42px 12px 42px;
+  }
+
+  .gallery-item:first-child .service__item {
+    margin-bottom: 15px;
+  }
+
+  .gallery-item--work-of-month::before {
+    top: 26px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+
+  .gallery-item:not(:first-child) {
+    flex-direction: column;
+    width: 295px;
+  }
+
+  .gallery-item:nth-child(3n+1) {
+    margin-right: 0;
+  }
+
+  .gallery-item__image-wrapper {
+    width: auto;
+
+    & img {
+      width: auto;
+    }
+  }
+
+  .gallery-item__review {
+    flex-grow: 1;
+    width: auto;
+  }
+
+  .gallery-item:not(:first-child) .gallery-item__review {
+    padding: 30px 35px 10px 35px;
+    border-top: none;
+    border-left: 1px solid #e5ddd5;
+  }
+
+  .gallery-item__text {
+    margin-bottom: 25px;
+  }
+
+  .gallery-item--work-of-month .gallery-item__text {
+    padding-right: 85px;
+  }
+}

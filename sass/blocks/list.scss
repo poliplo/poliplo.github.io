@@ -1,0 +1,101 @@
+.enrol__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.list__item {
+  &:nth-child(4) {
+    margin-top: 30px;
+  }
+
+  &:nth-child(6) {
+    margin-top: 30px;
+  }
+}
+
+.list__item input,
+.list__textarea {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 17px;
+
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+
+  border: 1px solid #e5ddd5;
+
+  &::placeholder {
+    color: #000000;
+  }
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:active,
+  &:focus {
+    border-color: #999999;
+    outline: none;
+  }
+}
+
+.list__item input {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.list__textarea {
+  height: 100px;
+  resize: none;
+}
+
+@media (min-width: $tablet-width) {
+  .list__item input {
+    margin-bottom: 34px;
+  }
+
+  .list__item input,
+  .list__textarea {
+    font-size: 24px;
+  }
+
+  .list__item {
+    &:nth-child(-n+3) {
+      flex-basis: 33.3%;
+    }
+
+    &:nth-child(n+4) {
+      flex-basis: 100%;
+    }
+
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+
+    &:nth-child(6) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .list__item {
+    &:nth-child(-n+3) {
+      flex-basis: 31%;
+    }
+
+    &:nth-child(n+4) {
+      flex-basis: 48.4%;
+    }
+
+    &:nth-child(6) {
+      flex-basis: 100%;
+    }
+  }
+}
